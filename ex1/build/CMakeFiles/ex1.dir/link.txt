@@ -1,0 +1,1 @@
+/usr/bin/gcc -g CMakeFiles/ex1.dir/src/main.c.o -o ex1  -lm -lpthread 

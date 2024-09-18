@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/os/os_071_2/Documents/labs_os/lab3_os/ex1/build",
+  "command": "/usr/bin/gcc   -g -o CMakeFiles/ex1.dir/src/main.c.o -c /home/os/os_071_2/Documents/labs_os/lab3_os/ex1/src/main.c",
+  "file": "/home/os/os_071_2/Documents/labs_os/lab3_os/ex1/src/main.c",
+  "output": "CMakeFiles/ex1.dir/src/main.c.o"
+}
+]
