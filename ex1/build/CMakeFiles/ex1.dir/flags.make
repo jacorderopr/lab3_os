@@ -4,7 +4,7 @@
 # compile C with /usr/bin/gcc
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = -I/home/os/os_071_2/Documents/labs_os/lab3_os/ex1/include
 
 C_FLAGS = -g
 

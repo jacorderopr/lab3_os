@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ex1.dir/src/functions.c.o"
+  "CMakeFiles/ex1.dir/src/functions.c.o.d"
   "CMakeFiles/ex1.dir/src/main.c.o"
   "CMakeFiles/ex1.dir/src/main.c.o.d"
   "ex1"

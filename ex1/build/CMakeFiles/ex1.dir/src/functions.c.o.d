@@ -1,5 +1,5 @@
-CMakeFiles/ex1.dir/src/main.c.o: \
- /home/os/os_071_2/Documents/labs_os/lab3_os/ex1/src/main.c \
+CMakeFiles/ex1.dir/src/functions.c.o: \
+ /home/os/os_071_2/Documents/labs_os/lab3_os/ex1/src/functions.c \
  /usr/include/stdc-predef.h \
  /home/os/os_071_2/Documents/labs_os/lab3_os/ex1/include/functions.h \
  /usr/include/pthread.h /usr/include/features.h \
