@@ -4,9 +4,12 @@
 #include <unistd.h>
 #include <math.h>
 
+// GLOBAL VARS SHOULD BE MOVED TO .H
 float user_input = 0.0;
 int is_thread_active = 1;
 int should_secondary_thread_check = 0;
+
+
 void* AskForFloat(void* param){
 
     do{
