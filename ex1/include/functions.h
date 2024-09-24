@@ -6,9 +6,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <math.h>
-
+#include <curses.h>
 
 void* AskForFloat(void* param);
 void* CalculateArcSine(void* param);
+extern pthread_mutex_t mutex;
 
 #endif
