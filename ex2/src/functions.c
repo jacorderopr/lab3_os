@@ -3,6 +3,7 @@
 // global vars
 // DEFINE the global var (which was declared in the functions.h)
 double array_tangent_vals[ARRAY_SIZE];
+pthread_mutex_t mutex;
 
 void FillArrayWithTangentValues(double array_tangent[ARRAY_SIZE]){
 
@@ -13,6 +14,7 @@ void FillArrayWithTangentValues(double array_tangent[ARRAY_SIZE]){
 
 void* SegmentSum(void* param){
     // the param MUST be able to be casted to an int*
+    // pthread_mutex_lock(&mutex);
     int* segment_ptr = (int*) param;
     int segment_index = *segment_ptr;
     
@@ -26,5 +28,6 @@ void* SegmentSum(void* param){
         *total_sum += array_tangent_vals[i];
     }
 
+    // pthread_mutex_unlock(&mutex);
     return (void*) total_sum;
 }

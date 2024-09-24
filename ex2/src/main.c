@@ -12,14 +12,16 @@ int main(){
     pthread_t pthread_array[5];
     int current_segment[5];
 
-    pthread_attr_t attr;
 
-    pthread_attr_init(&attr);
+    pthread_mutex_init(&mutex, NULL);
+
+ 
     int curr_segment_test_var = 0;
     for(int i = 0; i < 5; i++){
         current_segment[i] = i;
-        pthread_create(&pthread_array[i], &attr, SegmentSum, (void*) &current_segment[i]); // &current_segment[i]
-       
+           
+        pthread_create(&pthread_array[i], NULL, SegmentSum, (void*) &current_segment[i]); // &current_segment[i]
+          
     }
     double total_sum = 0;
     for(int i = 0; i < 5; i++){
