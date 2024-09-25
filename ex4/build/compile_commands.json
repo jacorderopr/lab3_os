@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/jacor/labs_os/lab3_os/ex4/build",
+  "command": "/usr/bin/gcc  -I/home/jacor/labs_os/lab3_os/ex4/include -g -o CMakeFiles/ex4.dir/src/main.c.o -c /home/jacor/labs_os/lab3_os/ex4/src/main.c",
+  "file": "/home/jacor/labs_os/lab3_os/ex4/src/main.c"
+},
+{
+  "directory": "/home/jacor/labs_os/lab3_os/ex4/build",
+  "command": "/usr/bin/gcc  -I/home/jacor/labs_os/lab3_os/ex4/include -g -o CMakeFiles/ex4.dir/src/functions.c.o -c /home/jacor/labs_os/lab3_os/ex4/src/functions.c",
+  "file": "/home/jacor/labs_os/lab3_os/ex4/src/functions.c"
+}
+]
