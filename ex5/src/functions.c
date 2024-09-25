@@ -16,10 +16,10 @@ void* UpdateAllBallPos(void*){
 while(!break_loop){
 
   clear();
-  getmaxyx(stdscr, row, col); /* Obtiene el numbero de filas y columnas */
+  
   mvprintw(0, 0, "%d", counter_val); // displays the counter, DOES NOT update it!
   for(int i = 0; i < ball_pos_array_index && ball_pos_array != NULL; i++){
-
+    getmaxyx(stdscr, row, col); /* Obtiene el numbero de filas y columnas */
     UpdateBallPos(i);
   }
   refresh();
@@ -30,20 +30,20 @@ while(!break_loop){
 
 void UpdateBallPos(int ball_pos_index){
 
-     mvprintw(ball_pos_array[ball_pos_array_index].y, ball_pos_array[ball_pos_array_index].x, "o");
+     mvprintw(ball_pos_array[ball_pos_index].y, ball_pos_array[ball_pos_index].x, "o");
    
-    ball_pos_array[ball_pos_array_index].x += dx;
-    ball_pos_array[ball_pos_array_index].y += dy;
-    if (ball_pos_array[ball_pos_array_index].x >= col - 1) {
+    ball_pos_array[ball_pos_index].x += dx;
+    ball_pos_array[ball_pos_index].y += dy;
+    if (ball_pos_array[ball_pos_index].x >= col - 1) {
       dx = -1;
     }
-    if (ball_pos_array[ball_pos_array_index].y >= row - 1) {
+    if (ball_pos_array[ball_pos_index].y >= row - 1) {
       dy = -1;
     }
-    if (ball_pos_array[ball_pos_array_index].x <= 1) {
+    if (ball_pos_array[ball_pos_index].x <= 1) {
       dx = 1;
     }
-    if (ball_pos_array[ball_pos_array_index].y <= 1) {
+    if (ball_pos_array[ball_pos_index].y <= 1) {
       dy = 1;
     }
 
@@ -74,12 +74,12 @@ void* GetCommands(void*){
         break;
       case 'f':
         // add a new ball
-        if(ball_pos_array_index < 2){
+        // if(ball_pos_array_index < 2){
 
-          ball_pos_array_index++;
-          ball_pos_array[ball_pos_array_index].x = 15;
-          ball_pos_array[ball_pos_array_index].y = 35;
-        }
+        //   ball_pos_array_index++;
+        //   ball_pos_array[ball_pos_array_index].x = 15;
+        //   ball_pos_array[ball_pos_array_index].y = 35;
+        // }
 
         break;
       case ENTER_NCURSES:

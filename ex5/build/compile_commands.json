@@ -1,14 +1,12 @@
 [
 {
-  "directory": "/home/os/os_071_2/Documents/labs_os/lab3_os/ex5/build",
-  "command": "/usr/bin/gcc  -I/home/os/os_071_2/Documents/labs_os/lab3_os/ex5/include -g -o CMakeFiles/bouncing_ball.dir/src/main.c.o -c /home/os/os_071_2/Documents/labs_os/lab3_os/ex5/src/main.c",
-  "file": "/home/os/os_071_2/Documents/labs_os/lab3_os/ex5/src/main.c",
-  "output": "CMakeFiles/bouncing_ball.dir/src/main.c.o"
+  "directory": "/home/jacor/labs_os/lab3_os/ex5/build",
+  "command": "/usr/bin/gcc  -I/home/jacor/labs_os/lab3_os/ex5/include -g -o CMakeFiles/ex5.dir/src/main.c.o -c /home/jacor/labs_os/lab3_os/ex5/src/main.c",
+  "file": "/home/jacor/labs_os/lab3_os/ex5/src/main.c"
 },
 {
-  "directory": "/home/os/os_071_2/Documents/labs_os/lab3_os/ex5/build",
-  "command": "/usr/bin/gcc  -I/home/os/os_071_2/Documents/labs_os/lab3_os/ex5/include -g -o CMakeFiles/bouncing_ball.dir/src/functions.c.o -c /home/os/os_071_2/Documents/labs_os/lab3_os/ex5/src/functions.c",
-  "file": "/home/os/os_071_2/Documents/labs_os/lab3_os/ex5/src/functions.c",
-  "output": "CMakeFiles/bouncing_ball.dir/src/functions.c.o"
+  "directory": "/home/jacor/labs_os/lab3_os/ex5/build",
+  "command": "/usr/bin/gcc  -I/home/jacor/labs_os/lab3_os/ex5/include -g -o CMakeFiles/ex5.dir/src/functions.c.o -c /home/jacor/labs_os/lab3_os/ex5/src/functions.c",
+  "file": "/home/jacor/labs_os/lab3_os/ex5/src/functions.c"
 }
 ]
