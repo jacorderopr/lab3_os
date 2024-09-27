@@ -12,12 +12,15 @@
 typedef struct {
   int x;
   int y;
+  int dx;
+  int dy;
 } BallPosition;
 
 #define ENTER_NCURSES 10
+#define SPACEBAR_NCURSES 32
 
-void UpdateBallPos(int ball_pos_index);
-
+void UpdateBallPos(int ball_index);
+void ChangeBallDirection(int ball_index);
 
 void* UpdateAllBallPos(void*);
 void* UpdateCounter(void*);
@@ -29,7 +32,6 @@ extern int ball_pos_array_index;
 
 extern int break_loop;
 extern int counter_val;
-extern int dx, dy;
 extern int row, col;
 
 

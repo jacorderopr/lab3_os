@@ -4,53 +4,28 @@ BallPosition ball_pos_array[10];
 int ball_pos_array_index = 0;
 
 int counter_val = 0;
-int dx, dy;
+
 int row, col;
 int break_loop = 0;
 
 void *UpdateAllBallPos(void *)
 {
-  dx = dy = 1; // tal vez hay que hacer uno para cada bola
+  
   while (!break_loop)
   {
 
     clear();
 
     mvprintw(0, 0, "%d", counter_val); // displays the counter, DOES NOT update it!
-    getmaxyx(stdscr, row, col);        /* Obtiene el numbero de filas y columnas */
 
     for (int i = 0; i < ball_pos_array_index; i++)
     {
+    getmaxyx(stdscr, row, col);        /* Obtiene el numbero de filas y columnas */
       // getmaxyx(stdscr, row, col); /* Obtiene el numbero de filas y columnas */
       UpdateBallPos(i);
     }
     refresh();
     usleep(100000); /* Duerme por 100ms */
-  }
-}
-
-void UpdateBallPos(int ball_pos_index)
-{
-
-  mvprintw(ball_pos_array[ball_pos_index].y, ball_pos_array[ball_pos_index].x, "o");
-
-  ball_pos_array[ball_pos_index].x += dx;
-  ball_pos_array[ball_pos_index].y += dy;
-  if (ball_pos_array[ball_pos_index].x >= col - 1)
-  {
-    dx = -1;
-  }
-  if (ball_pos_array[ball_pos_index].y >= row - 1)
-  {
-    dy = -1;
-  }
-  if (ball_pos_array[ball_pos_index].x <= 1)
-  {
-    dx = 1;
-  }
-  if (ball_pos_array[ball_pos_index].y <= 1)
-  {
-    dy = 1;
   }
 }
 
@@ -75,16 +50,22 @@ void *GetCommands(void *)
     refresh();
     switch (key_stroke)
     {
-    case KEY_LEFT:
-      /* code */
+    case 'c':
+      // change direction of balls
+      for(int i = 0; i < ball_pos_array_index; i++){
+        ChangeBallDirection(i);
+      }
       break;
-    case 'f':
+    case SPACEBAR_NCURSES:
       // add a new ball
       if (ball_pos_array_index < 10)
       {
 
         ball_pos_array[ball_pos_array_index].x = (rand() % 20) + 1;
         ball_pos_array[ball_pos_array_index].y = (rand() % 20) + 1;
+        ball_pos_array[ball_pos_array_index].dx = 1;
+        ball_pos_array[ball_pos_array_index].dy = -1;
+
         ball_pos_array_index++;
       }
 
@@ -94,5 +75,57 @@ void *GetCommands(void *)
       break_loop = 1;
       break;
     }
+  }
+}
+
+void UpdateBallPos(int ball_index)
+{
+
+  mvprintw(ball_pos_array[ball_index].y, ball_pos_array[ball_index].x, "o");
+
+  ball_pos_array[ball_index].x += ball_pos_array[ball_index].dx;
+  ball_pos_array[ball_index].y += ball_pos_array[ball_index].dy;
+
+  if (ball_pos_array[ball_index].x >= col - 1)
+  {
+    ball_pos_array[ball_index].dx = -1;
+  }
+  if (ball_pos_array[ball_index].y >= row - 1)
+  {
+
+    ball_pos_array[ball_index].dy = -1;
+
+  }
+  if (ball_pos_array[ball_index].x <= 1)
+  {
+
+    ball_pos_array[ball_index].dx = 1;
+
+  }
+  if (ball_pos_array[ball_index].y <= 1)
+  {
+
+    ball_pos_array[ball_index].dy = 1;
+
+  }
+}
+
+void ChangeBallDirection(int ball_index){
+  // set dx and dy to 1 or -1 randomly
+  int set_dx_positive = rand() % 2;
+  if(set_dx_positive){
+    ball_pos_array[ball_index].dx = 1;
+  }
+  else{
+    ball_pos_array[ball_index].dx = -1;
+  }
+
+
+  int set_dy_positive = rand() % 2;
+  if(set_dy_positive){
+    ball_pos_array[ball_index].dy = 1;
+  }
+  else{
+   ball_pos_array[ball_index].dy = -1; 
   }
 }
