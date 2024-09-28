@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ex1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ex1-Debug-dfb8c7d90e29228c078a.json",
+					"jsonFile" : "target-ex1-Debug-847f1e38ae6b51548b10.json",
 					"name" : "ex1",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/os/os_071_2/Documents/labs_os/lab3_os/ex1/build",
-		"source" : "/home/os/os_071_2/Documents/labs_os/lab3_os/ex1"
+		"build" : "/home/jacor/Documents/labs_os/lab3_os/ex1/build",
+		"source" : "/home/jacor/Documents/labs_os/lab3_os/ex1"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 3
 	}
 }

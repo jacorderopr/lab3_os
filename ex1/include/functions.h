@@ -11,5 +11,7 @@
 void* AskForFloat(void* param);
 void* CalculateArcSine(void* param);
 extern pthread_mutex_t mutex;
+extern pthread_cond_t cond_wait_read;
+extern pthread_cond_t cond_wait_print;
 
 #endif

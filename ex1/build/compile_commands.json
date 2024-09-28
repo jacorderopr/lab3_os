@@ -1,14 +1,12 @@
 [
 {
-  "directory": "/home/os/os_071_2/Documents/labs_os/lab3_os/ex1/build",
-  "command": "/usr/bin/gcc  -I/home/os/os_071_2/Documents/labs_os/lab3_os/ex1/include -g -o CMakeFiles/ex1.dir/src/main.c.o -c /home/os/os_071_2/Documents/labs_os/lab3_os/ex1/src/main.c",
-  "file": "/home/os/os_071_2/Documents/labs_os/lab3_os/ex1/src/main.c",
-  "output": "CMakeFiles/ex1.dir/src/main.c.o"
+  "directory": "/home/jacor/Documents/labs_os/lab3_os/ex1/build",
+  "command": "/usr/bin/gcc  -I/home/jacor/Documents/labs_os/lab3_os/ex1/include -g -o CMakeFiles/ex1.dir/src/main.c.o -c /home/jacor/Documents/labs_os/lab3_os/ex1/src/main.c",
+  "file": "/home/jacor/Documents/labs_os/lab3_os/ex1/src/main.c"
 },
 {
-  "directory": "/home/os/os_071_2/Documents/labs_os/lab3_os/ex1/build",
-  "command": "/usr/bin/gcc  -I/home/os/os_071_2/Documents/labs_os/lab3_os/ex1/include -g -o CMakeFiles/ex1.dir/src/functions.c.o -c /home/os/os_071_2/Documents/labs_os/lab3_os/ex1/src/functions.c",
-  "file": "/home/os/os_071_2/Documents/labs_os/lab3_os/ex1/src/functions.c",
-  "output": "CMakeFiles/ex1.dir/src/functions.c.o"
+  "directory": "/home/jacor/Documents/labs_os/lab3_os/ex1/build",
+  "command": "/usr/bin/gcc  -I/home/jacor/Documents/labs_os/lab3_os/ex1/include -g -o CMakeFiles/ex1.dir/src/functions.c.o -c /home/jacor/Documents/labs_os/lab3_os/ex1/src/functions.c",
+  "file": "/home/jacor/Documents/labs_os/lab3_os/ex1/src/functions.c"
 }
 ]
