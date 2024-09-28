@@ -1,0 +1,3 @@
+/home/jacor/Documents/labs_os/lab3_os/ex3/build/CMakeFiles/ex2.dir
+/home/jacor/Documents/labs_os/lab3_os/ex3/build/CMakeFiles/edit_cache.dir
+/home/jacor/Documents/labs_os/lab3_os/ex3/build/CMakeFiles/rebuild_cache.dir
