@@ -6,16 +6,20 @@ void *ProcessFile(void *);
 void *GetSquareRootData(void *);
 
 float ApproximateSqrt(int R);
+void PrintTimes();
 int input_buffer[10000];
 float processed_buffer[10000];
 char *FILENAME = "data.txt";
 int n_read_values = 0;
 
+struct timeval time_array[6];
 pthread_mutex_t mutex;
 pthread_cond_t cond_wait_read;
 
 int main()
 {
+    
+    
  
     pthread_t create_or_check_file;
 
@@ -41,6 +45,7 @@ int main()
 
     pthread_join(square_root_values, NULL);
 
+    PrintTimes();
     return 0;
 }
 
@@ -49,6 +54,7 @@ Write a program that, as soon as it starts, creates an initial thread that check
 If it does not exist, the thread creates the file and writes 10,000 pseudo-random unsigned 8-bit integer values, one below the other, and returns 0.*/
 void *CreateTxtFile(void *)
 {
+ 
 
     FILE *file_exists_ptr = fopen(FILENAME, "r");
     int *output = malloc(sizeof(int));
@@ -76,7 +82,6 @@ void *CreateTxtFile(void *)
         fclose(file_exists_ptr); // the file existed so we close it.
         *output = 0;
     }
-
     return (void *)output;
 }
 
@@ -87,7 +92,7 @@ The first thread is responsible for reading the data from the file individually 
 
 void *ReadFile(void *)
 {
-
+    gettimeofday(&(time_array[0]), NULL);
     FILE *file_ptr = fopen(FILENAME, "r");
     int number;
     while (fscanf(file_ptr, "%d", &number) != EOF)
@@ -101,18 +106,20 @@ void *ReadFile(void *)
 
     printf("total amount of elements read: %d\n", n_read_values);
     fclose(file_ptr);
+    gettimeofday(&(time_array[1]), NULL);
+
 }
 
 void *ProcessFile(void *)
 {
-
+    gettimeofday(&(time_array[2]), NULL);
     for (int n_processed_values = 0; n_processed_values < 10000; n_processed_values++)
     {
         pthread_mutex_lock(&mutex);
         while (n_processed_values >= n_read_values)
         {
             // reached a point that is being written to, so we sleep
-            printf("Cond Wait! i: %d\n", n_processed_values);
+            // printf("Cond Wait! i: %d\n", n_processed_values);
             pthread_cond_wait(&cond_wait_read, &mutex);
         }
     
@@ -123,6 +130,8 @@ void *ProcessFile(void *)
         pthread_mutex_unlock(&mutex);
 
     }
+    gettimeofday(&(time_array[3]), NULL);
+
 }
 
 float ApproximateSqrt(int R){
@@ -140,6 +149,8 @@ float ApproximateSqrt(int R){
 }
 
 void* GetSquareRootData(void*){
+    gettimeofday(&(time_array[4]), NULL);
+
     FILE* file_ptr = fopen("sqrt.txt", "w");
 
     for(int i = 0; i < 10000; i++){
@@ -147,4 +158,31 @@ void* GetSquareRootData(void*){
     }
 
     fclose(file_ptr);
+    gettimeofday(&(time_array[5]), NULL);
+
+}
+
+void PrintTimes(){
+
+    for(int i = 0; i < 5; i+= 2){
+        int start_sec = time_array[i].tv_sec;
+        int start_microsec = time_array[i].tv_usec;
+
+        int end_sec = time_array[i + 1].tv_sec;
+        int end_microsec = time_array[i + 1].tv_usec;
+
+        int seconds = end_sec - start_sec;
+        int microseconds = end_microsec - start_microsec;
+
+        if(microseconds < 0){
+            // adjust the time
+            seconds -= 1;
+            // add 1 seconds to the NEGATIVE value of microseconds to fix it.
+            microseconds += 1000000; // 1 million microsec = 1 sec
+
+        }
+        float elapsed_time = seconds + microseconds / 1e6;
+        printf("Thread #%d Elapsed Time: %f\n", i / 2 + 1, elapsed_time);
+
+    }
 }
