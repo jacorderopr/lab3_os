@@ -144,7 +144,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=ex2
+CMAKE_PROJECT_NAME:STATIC=ex3
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -216,6 +216,15 @@ ex2_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 ex2_SOURCE_DIR:STATIC=/home/jacor/Documents/labs_os/lab3_os/ex3
+
+//Value Computed by CMake
+ex3_BINARY_DIR:STATIC=/home/jacor/Documents/labs_os/lab3_os/ex3/build
+
+//Value Computed by CMake
+ex3_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+ex3_SOURCE_DIR:STATIC=/home/jacor/Documents/labs_os/lab3_os/ex3
 
 
 ########################

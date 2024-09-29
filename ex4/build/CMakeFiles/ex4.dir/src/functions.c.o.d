@@ -1,7 +1,7 @@
 CMakeFiles/ex4.dir/src/functions.c.o: \
- /home/jacor/labs_os/lab3_os/ex4/src/functions.c \
+ /home/jacor/Documents/labs_os/lab3_os/ex4/src/functions.c \
  /usr/include/stdc-predef.h \
- /home/jacor/labs_os/lab3_os/ex4/include/functions.h \
+ /home/jacor/Documents/labs_os/lab3_os/ex4/include/functions.h \
  /usr/include/curses.h /usr/include/ncurses_dll.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

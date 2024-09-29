@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jacor/labs_os/lab3_os/ex4
+CMAKE_SOURCE_DIR = /home/jacor/Documents/labs_os/lab3_os/ex4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jacor/labs_os/lab3_os/ex4/build
+CMAKE_BINARY_DIR = /home/jacor/Documents/labs_os/lab3_os/ex4/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ex4.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/ex4.dir/flags.make
 CMakeFiles/ex4.dir/src/main.c.o: CMakeFiles/ex4.dir/flags.make
 CMakeFiles/ex4.dir/src/main.c.o: ../src/main.c
 CMakeFiles/ex4.dir/src/main.c.o: CMakeFiles/ex4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacor/labs_os/lab3_os/ex4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ex4.dir/src/main.c.o"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ex4.dir/src/main.c.o -MF CMakeFiles/ex4.dir/src/main.c.o.d -o CMakeFiles/ex4.dir/src/main.c.o -c /home/jacor/labs_os/lab3_os/ex4/src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacor/Documents/labs_os/lab3_os/ex4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ex4.dir/src/main.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ex4.dir/src/main.c.o -MF CMakeFiles/ex4.dir/src/main.c.o.d -o CMakeFiles/ex4.dir/src/main.c.o -c /home/jacor/Documents/labs_os/lab3_os/ex4/src/main.c
 
 CMakeFiles/ex4.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ex4.dir/src/main.c.i"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jacor/labs_os/lab3_os/ex4/src/main.c > CMakeFiles/ex4.dir/src/main.c.i
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jacor/Documents/labs_os/lab3_os/ex4/src/main.c > CMakeFiles/ex4.dir/src/main.c.i
 
 CMakeFiles/ex4.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ex4.dir/src/main.c.s"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jacor/labs_os/lab3_os/ex4/src/main.c -o CMakeFiles/ex4.dir/src/main.c.s
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jacor/Documents/labs_os/lab3_os/ex4/src/main.c -o CMakeFiles/ex4.dir/src/main.c.s
 
 CMakeFiles/ex4.dir/src/functions.c.o: CMakeFiles/ex4.dir/flags.make
 CMakeFiles/ex4.dir/src/functions.c.o: ../src/functions.c
 CMakeFiles/ex4.dir/src/functions.c.o: CMakeFiles/ex4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacor/labs_os/lab3_os/ex4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ex4.dir/src/functions.c.o"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ex4.dir/src/functions.c.o -MF CMakeFiles/ex4.dir/src/functions.c.o.d -o CMakeFiles/ex4.dir/src/functions.c.o -c /home/jacor/labs_os/lab3_os/ex4/src/functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jacor/Documents/labs_os/lab3_os/ex4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ex4.dir/src/functions.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ex4.dir/src/functions.c.o -MF CMakeFiles/ex4.dir/src/functions.c.o.d -o CMakeFiles/ex4.dir/src/functions.c.o -c /home/jacor/Documents/labs_os/lab3_os/ex4/src/functions.c
 
 CMakeFiles/ex4.dir/src/functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ex4.dir/src/functions.c.i"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jacor/labs_os/lab3_os/ex4/src/functions.c > CMakeFiles/ex4.dir/src/functions.c.i
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jacor/Documents/labs_os/lab3_os/ex4/src/functions.c > CMakeFiles/ex4.dir/src/functions.c.i
 
 CMakeFiles/ex4.dir/src/functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ex4.dir/src/functions.c.s"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jacor/labs_os/lab3_os/ex4/src/functions.c -o CMakeFiles/ex4.dir/src/functions.c.s
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jacor/Documents/labs_os/lab3_os/ex4/src/functions.c -o CMakeFiles/ex4.dir/src/functions.c.s
 
 # Object files for target ex4
 ex4_OBJECTS = \
@@ -109,7 +109,7 @@ ex4: CMakeFiles/ex4.dir/src/main.c.o
 ex4: CMakeFiles/ex4.dir/src/functions.c.o
 ex4: CMakeFiles/ex4.dir/build.make
 ex4: CMakeFiles/ex4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jacor/labs_os/lab3_os/ex4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ex4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jacor/Documents/labs_os/lab3_os/ex4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ex4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ex4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/ex4.dir/clean:
 .PHONY : CMakeFiles/ex4.dir/clean
 
 CMakeFiles/ex4.dir/depend:
-	cd /home/jacor/labs_os/lab3_os/ex4/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jacor/labs_os/lab3_os/ex4 /home/jacor/labs_os/lab3_os/ex4 /home/jacor/labs_os/lab3_os/ex4/build /home/jacor/labs_os/lab3_os/ex4/build /home/jacor/labs_os/lab3_os/ex4/build/CMakeFiles/ex4.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jacor/Documents/labs_os/lab3_os/ex4/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jacor/Documents/labs_os/lab3_os/ex4 /home/jacor/Documents/labs_os/lab3_os/ex4 /home/jacor/Documents/labs_os/lab3_os/ex4/build /home/jacor/Documents/labs_os/lab3_os/ex4/build /home/jacor/Documents/labs_os/lab3_os/ex4/build/CMakeFiles/ex4.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ex4.dir/depend
 

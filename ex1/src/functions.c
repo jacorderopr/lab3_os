@@ -8,6 +8,22 @@ pthread_mutex_t mutex;
 pthread_cond_t cond_wait_read;
 pthread_cond_t cond_wait_print;
 
+/**
+ * @brief Asks the user for a floating-point number between 0 and 1 to calculate its arcsine.
+ *
+ * This function repeatedly prompts the user for a floating-point number between 0 and 1. 
+ * It locks the `mutex` to ensure thread-safe access to shared resources and signals another 
+ * thread after receiving the input using `pthread_cond_signal()`. The function then waits for 
+ * the other thread to finish processing the input before prompting again, using 
+ * `pthread_cond_wait()`. It continues this process until the user inputs a number greater than 100.
+ *
+ * @param[in] param A pointer to any parameter (unused in this function).
+ *
+ * @return `NULL` when the input exceeds 100, at which point the thread will exit.
+ *
+ * @note The function uses mutex locks and condition variables to coordinate with another thread.
+ */
+
 void* AskForFloat(void* param){
 
     do{
@@ -30,6 +46,23 @@ void* AskForFloat(void* param){
     printf("AskForFloat Thread Exited!\n");
     
 }
+
+/**
+ * @brief Calculates the arcsine of a user-provided input between 0 and 1.
+ *
+ * This function continuously checks the shared `user_input` value and, if the input is 
+ * between 0 and 1, calculates and prints its arcsine using the `asinf()` function. 
+ * The function uses a mutex to ensure that only one thread accesses and modifies 
+ * the `user_input` at a time. The function also coordinates with another thread 
+ * through condition variables (`pthread_cond_signal` and `pthread_cond_wait`) 
+ * to control the timing of the input and output operations.
+ *
+ * @param[in] param A pointer to any parameter (unused in this function).
+ *
+ * @return `NULL` when the `user_input` exceeds 100, at which point the thread will exit.
+ *
+ * @note The function uses condition variables and mutex locks for thread synchronization.
+ */
 
 void* CalculateArcSine(void* param){
     while(1){
