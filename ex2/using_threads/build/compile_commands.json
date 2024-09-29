@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/jacor/Documents/labs_os/lab3_os/ex2/using_threads/build",
+  "command": "/usr/bin/gcc  -I/home/jacor/Documents/labs_os/lab3_os/ex2/using_threads/include -g -o CMakeFiles/ex2_with_threads.dir/src/main.c.o -c /home/jacor/Documents/labs_os/lab3_os/ex2/using_threads/src/main.c",
+  "file": "/home/jacor/Documents/labs_os/lab3_os/ex2/using_threads/src/main.c"
+},
+{
+  "directory": "/home/jacor/Documents/labs_os/lab3_os/ex2/using_threads/build",
+  "command": "/usr/bin/gcc  -I/home/jacor/Documents/labs_os/lab3_os/ex2/using_threads/include -g -o CMakeFiles/ex2_with_threads.dir/src/functions.c.o -c /home/jacor/Documents/labs_os/lab3_os/ex2/using_threads/src/functions.c",
+  "file": "/home/jacor/Documents/labs_os/lab3_os/ex2/using_threads/src/functions.c"
+}
+]
