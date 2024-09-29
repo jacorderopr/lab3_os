@@ -1,1 +1,0 @@
-/usr/bin/gcc -g CMakeFiles/ex3.dir/src/main.c.o CMakeFiles/ex3.dir/src/functions.c.o -o ex3  -lm -lpthread 

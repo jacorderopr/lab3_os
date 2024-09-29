@@ -1,3 +1,0 @@
-/home/jacor/Documents/labs_os/lab3_os/ex2/using_threads/build/CMakeFiles/ex2_with_threads.dir
-/home/jacor/Documents/labs_os/lab3_os/ex2/using_threads/build/CMakeFiles/edit_cache.dir
-/home/jacor/Documents/labs_os/lab3_os/ex2/using_threads/build/CMakeFiles/rebuild_cache.dir

@@ -1,1 +1,0 @@
-/usr/bin/gcc -g CMakeFiles/ex2_with_threads.dir/src/main.c.o CMakeFiles/ex2_with_threads.dir/src/functions.c.o -o ex2_with_threads  -lm -lpthread 
